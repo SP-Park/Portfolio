@@ -9,14 +9,12 @@
         content="My first wehsite" 
     />
     <meta name="author" content="Pil" />
-<!-- Font Awesome 
+
     <link 
         rel="stylesheet" 
         href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" 
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" 
-        crossorigin="anonymous"
-    /> -->
-
+        crossorigin="anonymous">
 
 
 
@@ -37,7 +35,7 @@
     <nav id="navbar">
         <div class="navbar__logo">
             <i class="fas fa-baseball"></i>
-            <a href="#">Pil</a>    <!-- 앵클 태그-->
+            <a href="#">Pil</a>    <!-- 앵커 태그. 클릭 시 주소 이동을 위함-->
         </div>
         <ul class="navbar__menu">    <!-- ul.navbar__menu>li.navbar__menu__item*6  ul-언오더리스트 . 클래스이름-->
             <li class="navbar__menu__item">home</li>
@@ -183,7 +181,83 @@
         </div>
     </section>
     <!-- Work -->
-    <section id="work"></section>
+    <section id="work">
+        <h1>My Works</h1>
+        <h3>Projects</h3>
+        <div class="work__categories">
+            <!-- button.category__btn*4-->
+            <button class="category__btn">
+                All<span class="category__count">8</span> </button>         
+            <button class="category__btn">
+                Front-end<span class="category__count">4</span></button>
+            <button class="category__btn">
+                back-end<span class="category__count">3</span></button>
+            <button class="category__btn">
+                Mobile<span class="category__count">2</span></button>  
+            <!-- 옵션(윈-알트) + 쉬프트 누른 뒤 마우스를 내리면 일렬 수정 가능-->
+        </div>
+        <div class="Work__projects">
+            <!-- 프로젝트 클릭 시 연결된 깃허브(주소)로 이동해야 하므로 앵커태그 사용 a.project-->
+            <!-- target="blank" 클릭시 이동할 주소의 탭이 새로운 탭에서 열림, 추가하지 않으면 현재 창에서 열림 -->
+            <a href="https://github.com/SP-Park/Portfolio" class="project" target="blank">
+            <img class="project__img" src="imgs/projects/project1.png" alt="fristProject"> <!-- 이미지 추가-->
+            <div class="project__description">
+                <h3>GitHub Site</h3>
+                <span>First WebSite</span>
+            </div>
+            </a>
+            <a href="https://github.com/SP-Park/Portfolio" class="project" target="blank">
+                <img class="project__img" src="imgs/projects/project2.png" alt="fristProject"> <!-- 이미지 추가-->
+                <div class="project__description">
+                    <h3>GitHub Site</h3>
+                    <span>First WebSite</span>
+                </div>
+            </a>
+            <a href="https://github.com/SP-Park/Portfolio" class="project" target="blank">
+                <img class="project__img" src="imgs/projects/project3.png" alt="fristProject"> <!-- 이미지 추가-->
+                <div class="project__description">
+                    <h3>GitHub Site</h3>
+                    <span>First WebSite</span>
+                </div>
+            </a>
+            <a href="https://github.com/SP-Park/Portfolio" class="project" target="blank">
+                <img class="project__img" src="imgs/projects/project4.png" alt="fristProject"> <!-- 이미지 추가-->
+                <div class="project__description">
+                    <h3>GitHub Site</h3>
+                    <span>First WebSite</span>
+                </div>
+            </a>
+            <a href="https://github.com/SP-Park/Portfolio" class="project" target="blank">
+                <img class="project__img" src="imgs/projects/project5.png" alt="fristProject"> <!-- 이미지 추가-->
+                <div class="project__description">
+                    <h3>GitHub Site</h3>
+                    <span>First WebSite</span>
+                </div>
+            </a><a href="https://github.com/SP-Park/Portfolio" class="project" target="blank">
+                <img class="project__img" src="imgs/projects/project6.png" alt="fristProject"> <!-- 이미지 추가-->
+                <div class="project__description">
+                    <h3>GitHub Site</h3>
+                    <span>First WebSite</span>
+                </div>
+            </a>
+            <a href="https://github.com/SP-Park/Portfolio" class="project" target="blank">
+                <img class="project__img" src="imgs/projects/project7.png" alt="fristProject"> <!-- 이미지 추가-->
+                <div class="project__description">
+                    <h3>GitHub Site</h3>
+                    <span>First WebSite</span>
+                </div>
+            </a>
+            <a href="https://github.com/SP-Park/Portfolio" class="project" target="blank">
+                <img class="project__img" src="imgs/projects/project8.png" alt="fristProject"> <!-- 이미지 추가-->
+                <div class="project__description">
+                    <h3>GitHub Site</h3>
+                    <span>First WebSite</span>
+                </div>
+            </a>
+        </div>
+
+
+    </section>
     <!-- Testimonials -->
     <section id="testimonials"></section>
     <!-- Contact -->

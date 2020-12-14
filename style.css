@@ -51,6 +51,13 @@ ul{
     padding-left: 0;
 }
 
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
 /* Typography */
 h1 {
     font-size: var(--font-large);
@@ -114,4 +121,34 @@ p{
 .navbar__menu__item:hover{
     background-color: var(--color-dart-pink);
 
+}
+
+/* Home */
+#home{
+    background: url('imgs/homebackground-200515-154505.png') center/cover no-repeat;
+    /* center/cover no-repeat 반응형 웹으로 만들기 위한 이미지 옵션 추가 */
+    padding: 40px;
+    text-align: center;
+}
+
+.home__avatar{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description{
+    color: var(--color-white);
+}
+
+.home__contact{
+    color: var(--color-white);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-light-white);
+    border-radius: var(--size-border-radius);
 }

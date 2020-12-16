@@ -284,3 +284,106 @@ p{
 .tools .etc {
     padding: 20px;
 }
+
+.work__categories{
+    margin: 40px;
+}
+
+.category__btn{
+    border: 1px solid var(--color-dark-white);
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+}
+
+.category__btn.active,
+.category__btn:hover{
+    background-color: var(--color-pink);
+    color: var(--color-white);
+}
+
+/*  아래 추가한 카운트의 효과의 조건을 설정 */
+.category__btn.active .category__count, /* active 상태의 카운트와 */
+.category__btn:hover .category__count /* hover 상태의 카운트일 경우 */
+{
+    opacity: 1;
+    top: 0;
+}
+
+.category__count{
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block; /* span일 경우 좌우로 꽉 잡고 있어서 모양이 이쁘게 나오지 않음 */
+    /* 효과 추가: 카운트가 보이지 않다가 마우스를 올리면 위에서 제자리로 나타남 */
+    position: relative;
+    top: -20px;
+    left: 4px;
+    opacity: 0; /* 0일 경우 보이지 않음 */
+    transition: all var(--animation-duration); 
+}
+
+.Work__projects{
+    display: flex;
+    flex-wrap: wrap; /* 한줄에 다 안들어가면 아랫줄로 변경 */
+    justify-content: center; /* 중간 정렬 */
+}
+
+.project{
+    position: relative; /* description 에서 앱솔루트 옵션을 쓰기 위한 기준점 지정 */ 
+    /* 앱솔루트 옵션 사용 시 기준점의 static이 아닌 다른 것을 사용하는 부모 */
+    /* 컨텐츠 중간 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 250px;
+    margin: 2px;
+    background-color: var(--color-light-white);
+}
+
+.project__img{
+    width: 100%;
+    height: 100%;
+}
+
+.project__description{
+    position: absolute; /* description은 박스안에 있는 게 아니라 호버시 설명으로 나타나게 만들어야 함 */
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0; /* 투명도 */
+    transition: all var(--animation-duration) ease-in;
+    transform: translateY(10px); /* hover시 설명이 올라오는 느낌을 주기 위해 조금 아래로 내려놓음 */
+}
+
+/* 프로젝트에 마우스를 올리면 설명이 나타나게 하기 위한 조건 */
+.project:hover .project__description{
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+
+.project__description h3 {
+    color: var(--color-white);
+}
+
+/* description 2줄 사이에 줄을 추가하기 위한 스타일링 */
+.project__description h3:after {
+    content: ''; /* 빈 컨텐츠 선언 */
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 25px;
+    height: 2px;
+    margin-left: -12px;
+    margin-top: 4px;
+    background-color: var(--color-dark-white);
+}

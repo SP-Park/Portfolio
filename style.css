@@ -126,6 +126,17 @@ p{
 
 }
 
+/* 반응형 메뉴 디자인 */
+.navbar__toggle-btn{
+    position: absolute;
+    top: 12px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none; /* opacity  사용 시 마우스가 올라가면 클릭이 되므로 사용 자제 */
+}
+
+
 /* Home */
 #home{
     background: url('imgs/homebackground-200515-154505.png') center/cover no-repeat;
@@ -456,3 +467,44 @@ p{
     color: var(--color-yellow);
 }
 
+/* 반응형 시 적용할 옵션들 */
+/* For blelow 768px screen width */
+@media screen and (max-width: 768px) {
+    .navbar__toggle-btn {
+        display: block;
+        align-items: flex-start;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .about__majors {
+        flex-direction: column;
+    }
+
+    .major {
+        margin-bottom: 38px;
+    }
+
+    .skillset {
+        flex-direction: column;
+    }
+
+    .project {
+        flex-grow: 1;
+    }
+
+    .testimonial__avatar {
+        width: 80px;
+        height: 80px;
+    }
+}

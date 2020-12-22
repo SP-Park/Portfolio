@@ -101,6 +101,7 @@ p{
     padding: 16px;
     color: var(--color-white);
     transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;  /* 무조건 위에 있도록 지정 */
 }
 
 #navbar.navbar--dark {

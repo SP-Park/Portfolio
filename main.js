@@ -16,3 +16,19 @@ document.addEventListener('scroll', () => {
     }
 });  /* 애로우 펑션 인자를 받지 않고 우리가 입력한 명령을 실행 */
 
+//메뉴를 클릭하면 이동
+const navbarMenu = document.querySelector('.navbar__menu');
+//클릭 이벤트를 받아오는 과정
+navbarMenu.addEventListener('click', (event) => { //클릭 시 이벤트를 받아옴
+    //클릭시 받아온 이벤트의 타켓을 출력
+    const target = event.target;
+    const link = target.dataset.link;
+    if(link == null) {
+        return;
+    }
+    console.log(event.target.dataset.link);
+// 받아온 아이디를 이용해 스크롤을 실행 javascript scroll to id 검색
+    const scrollTo = document.querySelector(link);
+    scrollTo.scrollIntoView({behavior: 'smooth'});
+});
+

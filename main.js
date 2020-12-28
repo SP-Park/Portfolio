@@ -43,6 +43,31 @@ homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
 })
 
+// 스크롤 시 홈 창을 점점 투명하게 만드는 기능 
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', ()=> {
+    // 스크롤 위치와 투명도를 반대로 적용될 수 잇도록 식을 만듬
+    // console.log(1 - window.scrollY / homeHeight);
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 클릭 시 이동 부분이 중복되므로 함수로 만들기 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);

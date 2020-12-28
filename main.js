@@ -26,9 +26,25 @@ navbarMenu.addEventListener('click', (event) => { //클릭 시 이벤트를 받�
     if(link == null) {
         return;
     }
-    console.log(event.target.dataset.link);
+    // console.log(event.target.dataset.link);
 // 받아온 아이디를 이용해 스크롤을 실행 javascript scroll to id 검색
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: 'smooth'});
+     // 중복 부분 함수화 (scrollIntoView)
+    // const scrollTo = document.querySelector(link);
+    // scrollTo.scrollIntoView({behavior: 'smooth'});
+    scrollIntoView(link);
 });
 
+// contact me 클릭 시 이동 
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
+    // 중복 부분 함수화 (scrollIntoView)
+    // const scrollTo = document.querySelector('#contact');
+    // scrollTo.scrollIntoView({behavior: 'smooth'});
+    scrollIntoView('#contact');
+})
+
+// 클릭 시 이동 부분이 중복되므로 함수로 만들기 
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: 'smooth'});
+}

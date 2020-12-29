@@ -353,6 +353,13 @@ p{
     display: flex;
     flex-wrap: wrap; /* 한줄에 다 안들어가면 아랫줄로 변경 */
     justify-content: center; /* 중간 정렬 */
+    opacity: 1;
+    transition: all var(--animation-duration) ease-out;
+}
+
+.Work__projects.ani-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
 }
 
 .project{
@@ -366,6 +373,10 @@ p{
     height: 250px;
     margin: 2px;
     background-color: var(--color-light-white);
+}
+
+.project.invisible {
+    display: none;
 }
 
 .project__img{
@@ -479,6 +490,31 @@ p{
     transform: scale(1.1);
     color: var(--color-yellow);
 }
+
+/* Scroll */
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 50px;
+    color: var(--color-white);
+    background-color: var(--color-pink);
+    border-radius: 50%;
+    /* display: none; 
+    dispaly 는 없어졌다가 나타나는 것이므로 애니메이션이 안됨 
+    대신 투명도를 사용하나 투명도는 클릭이 되므로 클릭을 막는 pointer-events 사용*/
+    opacity: 0;
+    pointer-events: none;
+    transition: all 300ms ease-in;
+}
+
+.arrow-up.visible {
+    /* display: block; */
+    opacity: 1;
+    pointer-events: auto;
+    /* CSS 구글 검색시 예제 mdn pointer-events */
+}
+
 
 /* 반응형 시 적용할 옵션들 */
 /* For blelow 768px screen width */

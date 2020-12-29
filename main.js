@@ -41,7 +41,72 @@ homeContactBtn.addEventListener('click', () => {
     // const scrollTo = document.querySelector('#contact');
     // scrollTo.scrollIntoView({behavior: 'smooth'});
     scrollIntoView('#contact');
-})
+});
+
+
+// 스크롤이 되면 화살표가 나타나도록 하는 기능
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+    if(window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+    }else{
+        arrowUp.classList.remove('visible');
+    }
+});
+
+// 화살표 클릭 시 홈으로 올라가게 하는 기능
+arrowUp.addEventListener('click', () => {
+    scrollIntoView('#home');
+});
+
+//Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.Work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+    // span안에 들어있는 버튼을 클릭시에도 값이 나와야 하므로 || 이후 부분 적어줌 (디버깅으로 확인 가능)
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+    
+    // 애니메이션 효과를 부여
+    projectContainer.classList.add('ani-out');
+  
+    // 일정 시간이 지나면 등록한 함수를 다시 불러주는 함수
+    setTimeout(() => {
+        // project 안의 멤버들의 타입을 하나씩 빙글빙글 돌면서 가져옴
+        projects.forEach((project) => {
+            console.log(project.dataset.type);
+            if(filter == '*' || filter == project.dataset.type) {
+                project.classList.remove('invisible');
+            }else  {
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('ani-out');
+    }, 300);
+});
+
+// 아래 3가지 함수는 동일함
+// 1.
+// projects.forEach((project) => {
+//    console.log(project);
+// });
+
+// 2.
+// for (let project of projects) {
+//     console.log(project);
+// }
+
+// 3.
+// let project;
+// for (let i = 0; i <projects.length; i++) {
+//     project = projects[i];
+//     console.log(project);
+// }
+
+
 
 // 스크롤 시 홈 창을 점점 투명하게 만드는 기능 
 const home = document.querySelector('.home__container');
@@ -72,4 +137,4 @@ document.addEventListener('scroll', ()=> {
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: 'smooth'});
-}
+};

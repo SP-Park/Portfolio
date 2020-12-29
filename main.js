@@ -70,6 +70,14 @@ workBtnContainer.addEventListener('click', (e) => {
         return;
     }
     
+    //선택된 메뉴를 기억, 액티브를 없애고 선택된 메뉴에 액티브 부여
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('selected');
+
+
+
     // 애니메이션 효과를 부여
     projectContainer.classList.add('ani-out');
   

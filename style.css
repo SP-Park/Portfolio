@@ -1,559 +1,557 @@
 /* Global */
 :root {
-/* Color */
---color-white: #ffffff;
---color-light-white: #eeeeee;
---color-dark-white: #bdbdbd;
---color-pink: #fe918d;
---color-dart-pink: #ff6863;
---color-black: #4d4d4d;
---color-dark-grey: #4d4d4d;
---color-grey: #616161;
---color-light-grey: #7c7979;
---color-blue: #73aace;
---color-yellow: #fff7d1;
---color-orange: #feb546;
---color-black: #000000;
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dart-pink: #ff6863;
+  --color-black: #4d4d4d;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
 
-/* Font Size */
---font-large: 48px;
---font-medium: 28px;
---font-regular: 18px;
---font-small: 16px;
---font-micro: 14px;
+  /* Font Size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
 
-/* Font Weight */
---weight-bold: 700;
---weight-semi-bold: 600;
---weight-regular: 400;
+  /* Font Weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
 
-/* Size */
---size-border-radius: 4px;
+  /* Size */
+  --size-border-radius: 4px;
 
-/* Animation 250~300ms가 적당*/
---animation-duration: 300ms; 
+  /* Animation 250~300ms가 적당*/
+  --animation-duration: 300ms;
 }
 /* Universal tags */
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-    
 
 body {
-    margin: 0;
-    cursor: default; /*커서에 마우스가 올라가도 텍스트 표시로 바뀌지 않음 */
+  margin: 0;
+  cursor: default; /*커서에 마우스가 올라가도 텍스트 표시로 바뀌지 않음 */
 }
 
-a{
-    text-decoration: none;
-    color: var(--color-white);
+a {
+  text-decoration: none;
+  color: var(--color-white);
 }
 
-ul{
-    list-style: none;
-    padding-left: 0;
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-button{
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    outline: none;
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* Typography */
 h1 {
-    font-size: var(--font-large);
-    font-weight: var(--weight-bold);
-    color: var(--color-black);
-    margin: 16px 0px;
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
 }
 
-h2{
-    font-size: var(--font-medium);
-    font-weight: var(--weight-semi-bold);
-    color: var(--color-black);
-    margin: 8px 0;
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
 }
 
-h3{
-    font-size: var(--font-regular);
-    font-weight: var(--weight-regular);
-    color: var(--color-black);
-    margin: 4px 0;
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0;
 }
 
-p{
-    font-size: var(--font-medium);
-    font-weight: var(--weight-regular);
-    color: var(--color-black);
-    margin: 4px 0;
+p {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0;
 }
 
 /* Navbar */
 #navbar {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent;
-    align-items: center;
-    padding: 16px;
-    color: var(--color-white);
-    transition: all var(--animation-duration) ease-in-out;
-    z-index: 1;  /* 무조건 위에 있도록 지정 */
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  align-items: center;
+  padding: 16px;
+  color: var(--color-white);
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 1; /* 무조건 위에 있도록 지정 */
 }
 
 #navbar.navbar--dark {
-    background-color:  var(--color-pink);
-    padding: 8px;
+  background-color: var(--color-pink);
+  padding: 8px;
 }
 
-.navbar__menu{
-    display: flex;
+.navbar__menu {
+  display: flex;
 }
 
-.navbar__logo{
-    font-size: var(--font-medium);
-    font-weight: var(--weight-semi-bold);
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
 }
 
-.navbar__menu__item{
-    padding: 8px, 0;
-    margin: 0 4px;
-    cursor: pointer;
-    border-radius: var(--size-border-radius);
-
+.navbar__menu__item {
+  padding: 8px, 12px;
+  margin: 0 4px;
+  color: var(--color-white);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item.active {
-    border: 1px solid var(--color-white);
-}
-
-.navbar__menu__item:hover{
-    background-color: var(--color-dart-pink);
-
+.navbar__menu__item:hover {
+  border-color: var(--color-white);
+  background-color: var(--color-dart-pink);
 }
 
 /* 반응형 메뉴 디자인 */
-.navbar__toggle-btn{
-    position: absolute;
-    top: 12px;
-    right: 32px;
-    font-size: 24px;
-    color: var(--color-white);
-    display: none; /* opacity  사용 시 마우스가 올라가면 클릭이 되므로 사용 자제 */
+.navbar__toggle-btn {
+  position: absolute;
+  top: 12px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none; /* opacity  사용 시 마우스가 올라가면 클릭이 되므로 사용 자제 */
 }
-
 
 /* Home */
-#home{
-    background: url('imgs/homebackground-200515-154505.png') center/cover no-repeat;
-    /* center/cover no-repeat 반응형 웹으로 만들기 위한 이미지 옵션 추가 */
-    padding: 40px;
-    padding-top: 120px; 
-    text-align: center;
+#home {
+  background: url("imgs/homebackground-200515-154505.png") center/cover
+    no-repeat;
+  /* center/cover no-repeat 반응형 웹으로 만들기 위한 이미지 옵션 추가 */
+  padding: 40px;
+  padding-top: 120px;
+  text-align: center;
 }
 
-.home__avatar{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 2px solid var(--color-light-white);
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
 }
 
 .home__title,
-.home__description{
-    color: var(--color-white);
+.home__description {
+  color: var(--color-white);
 }
 
-.home__contact{
-    color: var(--color-white);
-    font-size: var(--font-regular);
-    font-weight: var(--weight-regular);
-    margin: 24px;
-    padding: 8px 12px;
-    border: 2px solid var(--color-light-white);
-    border-radius: var(--size-border-radius);
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-light-white);
+  border-radius: var(--size-border-radius);
 }
 
 /* Section common */
 .section {
-    padding: 50px;
-    text-align: center;
-    margin: auto;
+  padding: 50px;
+  text-align: center;
+  margin: auto;
 }
 
-.section__container{
-    max-width: 1200px;    /* 윈도우에서 최대는 보통 1000 ~ 1200 을 많이 씀 */
-    margin: auto;
+.section__container {
+  max-width: 1200px; /* 윈도우에서 최대는 보통 1000 ~ 1200 을 많이 씀 */
+  margin: auto;
 }
-
 
 /* about */
-.about__majors{
-    display: flex;  /* 3개의 컨텐츠를 한줄에 표현 */
-    justify-content: space-between;  /* 3개의 컨텐츠 중간에 공간을 넣기 위함 */
-    margin: 80px 0; /* 위아래 공간 벌림 */
+.about__majors {
+  display: flex; /* 3개의 컨텐츠를 한줄에 표현 */
+  justify-content: space-between; /* 3개의 컨텐츠 중간에 공간을 넣기 위함 */
+  margin: 80px 0; /* 위아래 공간 벌림 */
 }
 
 /* 아이콘 크기를 키우고 둥글게 만들기 */
-.major__icon{
-    width: 170px;
-    height: 170px;
-    line-height: 170px; /* 아이콘을 중간에 정렬하기 위함, 라인 하잇을 크기만큼 주면 자동으로 중간 정렬됨 */
-    font-size: 70px;  /* 어썸폰트도 폰트이므로 폰트로 사이즈 조절 */
-    /* background-color: yellow; 임시로 배경 색을 넣어 작업을 쉽게 하기 위함 */
-    margin: auto; /* 마진이 한쪽에만 들어있어 제대로 정렬이 안될 경우 */
-    color: var(--color-blue);  /* 아이콘의 색을 블루로 지정 */
-    border: 1px solid var(--color-black); /* 사각 푸른 경계 삽입 */
-    border-radius: 50%; /* 둥글게 만듬 */
-    margin-bottom: 16px; /* 아이콘과 아래 글자 사이에 간격을 벌림 */
+.major__icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px; /* 아이콘을 중간에 정렬하기 위함, 라인 하잇을 크기만큼 주면 자동으로 중간 정렬됨 */
+  font-size: 70px; /* 어썸폰트도 폰트이므로 폰트로 사이즈 조절 */
+  /* background-color: yellow; 임시로 배경 색을 넣어 작업을 쉽게 하기 위함 */
+  margin: auto; /* 마진이 한쪽에만 들어있어 제대로 정렬이 안될 경우 */
+  color: var(--color-blue); /* 아이콘의 색을 블루로 지정 */
+  border: 1px solid var(--color-black); /* 사각 푸른 경계 삽입 */
+  border-radius: 50%; /* 둥글게 만듬 */
+  margin-bottom: 16px; /* 아이콘과 아래 글자 사이에 간격을 벌림 */
 }
 
-.major__icon i { /* 아이콘이 천천히 돌아가도록 시간 설정 */
-    transition: all var(--animation-duration);
+.major__icon i {
+  /* 아이콘이 천천히 돌아가도록 시간 설정 */
+  transition: all var(--animation-duration);
 }
 
-.major__icon:hover i{   
-    /* 1> .major__icon:hover <- 전체가 바뀜 
+.major__icon:hover i {
+  /* 1> .major__icon:hover <- 전체가 바뀜 
        2> .major__icon i:hover   <- 아이콘만 바뀜 (바깥 원 테두리는 안바꾸고 마우스가 테두리가 아닌 아이콘에 올라갔을 경우 바뀜
        3> .major__icon:hover i <- 아이콘만 바뀜 (마우스가 바깥 원 테두리에 올라가도 아이콘만 바뀜) */
-    color: var(--color-pink);
-    transform: rotate(-30deg) scale(1.1); /* 마우스를 올릴 경우 아이콘을 왼쪽(-30도)으로 회전 및 크기를 키움 */
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1.1); /* 마우스를 올릴 경우 아이콘을 왼쪽(-30도)으로 회전 및 크기를 키움 */
 }
 
-.major__title, .major__description {
-    color: var(--color-dart-grey);
+.major__title,
+.major__description {
+  color: var(--color-dart-grey);
 }
 
 .major__description {
-    font-size: var(--font-small);
+  font-size: var(--font-small);
 }
 
 .jobs {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.job__description{
-    margin: 0 16px;
-    text-align: left;
+.job__description {
+  margin: 0 16px;
+  text-align: left;
 }
 
-.job__name, .job__period{
-    color: var(--color-light-grey);
+.job__name,
+.job__period {
+  color: var(--color-light-grey);
 }
 
-.job__name{
-    font-size: var(--font-small);
+.job__name {
+  font-size: var(--font-small);
 }
 
 .job__period {
-    font-size: var(--font-micro);
+  font-size: var(--font-micro);
 }
 
 /* Skill */
-#skills{
-    background-color: var(--color-yellow);
+#skills {
+  background-color: var(--color-yellow);
 }
 
-.skillset{
-    display: flex;
-    background-color: var(--color-light-grey);
-    color: var(--color-light-white);
-    margin: 20px 0;
+.skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 20px 0;
 }
 
-.skillset__left{
-    flex-basis: 60%;
-    background-color: var(--color-dark-grey);
-    padding: 20px 40px;
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
 }
 
-.skillset__right{
-    flex-basis: 40%;
-    background-color: var(--color-grey);
+.skillset__right {
+  flex-basis: 40%;
+  background-color: var(--color-grey);
 }
 
-.skillset__title{
-    color: var(--color-white);
+.skillset__title {
+  color: var(--color-white);
 }
 
-.skill{
-    margin-bottom: 12px;
+.skill {
+  margin-bottom: 12px;
 }
-.skill__description{
-    display: flex;
-    justify-content: space-between;
+.skill__description {
+  display: flex;
+  justify-content: space-between;
 }
 
-.skill__bar{
-    width: 100%;
-    height: 3px;
-    background-color: var(--color-grey);
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
 }
 
 .skill_value {
-    /* width: 100%;  각 스킬 마다 값이 다르므로 여기서 정의하면 다 같은 값으로 표시 됨 
+  /* width: 100%;  각 스킬 마다 값이 다르므로 여기서 정의하면 다 같은 값으로 표시 됨 
                      HTML에 인라인화로 지정해야 함 
                      <div class="skill_value" style="width: 10%;">*/
-    height: 3px;
-    background-color: var(--color-orange);
+  height: 3px;
+  background-color: var(--color-orange);
 }
 
 .tools .etc {
-    padding: 20px;
+  padding: 20px;
 }
 
 /* Work */
 
-.work__categories{
-    margin: 40px;
+.work__categories {
+  margin: 40px;
 }
 
-.category__btn{
-    border: 1px solid var(--color-dark-white);
-    border-radius: var(--size-border-radius);
-    font-size: var(--font-regular);
-    padding: 8px 48px;
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
 }
 
-.category__btn.active,
-.category__btn:hover{
-    background-color: var(--color-pink);
-    color: var(--color-white);
+.category__btn.selected,
+.category__btn:hover {
+  background-color: var(--color-pink);
+  color: var(--color-white);
 }
 
 /*  아래 추가한 카운트의 효과의 조건을 설정 */
-.category__btn.active .category__count, /* active 상태의 카운트와 */
-.category__btn:hover .category__count /* hover 상태의 카운트일 경우 */
-{
-    opacity: 1;
-    top: 0;
+.category__btn.selected .category__count, /* active 상태의 카운트와 */
+.category__btn:hover .category__count /* hover 상태의 카운트일 경우 */ {
+  opacity: 1;
+  top: 0;
 }
 
-.category__count{
-    background-color: var(--color-orange);
-    border-radius: 50%;
-    color: var(--color-white);
-    width: 24px;
-    height: 24px;
-    line-height: 24px;
-    display: inline-block; /* span일 경우 좌우로 꽉 잡고 있어서 모양이 이쁘게 나오지 않음 */
-    /* 효과 추가: 카운트가 보이지 않다가 마우스를 올리면 위에서 제자리로 나타남 */
-    position: relative;
-    top: -20px;
-    left: 4px;
-    opacity: 0; /* 0일 경우 보이지 않음 */
-    transition: all var(--animation-duration); 
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block; /* span일 경우 좌우로 꽉 잡고 있어서 모양이 이쁘게 나오지 않음 */
+  /* 효과 추가: 카운트가 보이지 않다가 마우스를 올리면 위에서 제자리로 나타남 */
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0; /* 0일 경우 보이지 않음 */
+  transition: all var(--animation-duration);
 }
 
-.Work__projects{
-    display: flex;
-    flex-wrap: wrap; /* 한줄에 다 안들어가면 아랫줄로 변경 */
-    justify-content: center; /* 중간 정렬 */
-    opacity: 1;
-    transition: all var(--animation-duration) ease-out;
+.Work__projects {
+  display: flex;
+  flex-wrap: wrap; /* 한줄에 다 안들어가면 아랫줄로 변경 */
+  justify-content: center; /* 중간 정렬 */
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
 }
 
 .Work__projects.ani-out {
-    opacity: 0;
-    transform: scale(0.96) translateY(40px);
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 
-.project{
-    position: relative; /* description 에서 앱솔루트 옵션을 쓰기 위한 기준점 지정 */ 
-    /* 앱솔루트 옵션 사용 시 기준점의 static이 아닌 다른 것을 사용하는 부모 */
-    /* 컨텐츠 중간 정렬 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 250px;
-    margin: 2px;
-    background-color: var(--color-light-white);
+.project {
+  position: relative; /* description 에서 앱솔루트 옵션을 쓰기 위한 기준점 지정 */
+  /* 앱솔루트 옵션 사용 시 기준점의 static이 아닌 다른 것을 사용하는 부모 */
+  /* 컨텐츠 중간 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
 }
 
 .project.invisible {
-    display: none;
+  display: none;
 }
 
-.project__img{
-    width: 100%;
-    height: 100%;
-    align-self: center;
+.project__img {
+  width: 100%;
+  height: 100%;
+  align-self: center;
 }
 
-.project__description{
-    position: absolute; /* description은 박스안에 있는 게 아니라 호버시 설명으로 나타나게 만들어야 함 */
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0; /* 투명도 */
-    transition: all var(--animation-duration) ease-in;
-    transform: translateY(10px); /* hover시 설명이 올라오는 느낌을 주기 위해 조금 아래로 내려놓음 */
+.project__description {
+  position: absolute; /* description은 박스안에 있는 게 아니라 호버시 설명으로 나타나게 만들어야 함 */
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0; /* 투명도 */
+  transition: all var(--animation-duration) ease-in;
+  transform: translateY(
+    10px
+  ); /* hover시 설명이 올라오는 느낌을 주기 위해 조금 아래로 내려놓음 */
 }
 
 /* 프로젝트에 마우스를 올리면 설명이 나타나게 하기 위한 조건 */
-.project:hover .project__description{
-    opacity: 0.8;
-    transform: translateY(0px);
+.project:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0px);
 }
 
 .project__description h3 {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 /* description 2줄 사이에 줄을 추가하기 위한 스타일링 */
 .project__description h3:after {
-    content: ''; /* 빈 컨텐츠 선언 */
-    display: block;
-    position: relative;
-    left: 50%;
-    width: 25px;
-    height: 2px;
-    margin-left: -12px;
-    margin-top: 4px;
-    background-color: var(--color-dark-white);
+  content: ""; /* 빈 컨텐츠 선언 */
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 25px;
+  height: 2px;
+  margin-left: -12px;
+  margin-top: 4px;
+  background-color: var(--color-dark-white);
 }
 
 /* Testimonial */
-#testimonials{
-    background-color: var(--color-dark-white);
+#testimonials {
+  background-color: var(--color-dark-white);
 }
 
-.testimonials{
-    margin: 40px;
+.testimonials {
+  margin: 40px;
 }
 
-.testimonial{
-    display: flex;
-    margin: 32px 0;
+.testimonial {
+  display: flex;
+  margin: 32px 0;
 }
 
 .testimonial__avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 .testimonial__avatar:nth-child(odd) {
-    margin-right:40px;
+  margin-right: 40px;
 }
 
 .testimonial__avatar:nth-child(even) {
-    margin-left:40px;
+  margin-left: 40px;
 }
 
-.testimonial__speech-bubble{
-    padding: 18px;
-    background-color: var(--color-white);
-    border-radius: var(--size-border-radius);
+.testimonial__speech-bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
 }
 
-.testimonial__speech-bubble p{
-    color: var(--color-light-grey);
+.testimonial__speech-bubble p {
+  color: var(--color-light-grey);
 }
 
-.testimonial__speech-bubble a{
-    color: var(--color-pink);
+.testimonial__speech-bubble a {
+  color: var(--color-pink);
 }
 
 /* Contact */
 #contact {
-    background-color: var(--color-pink);
+  background-color: var(--color-pink);
 }
 
 .contact__title,
 .contact__email,
 .contact__rights {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
-.contact__title{
-    margin: 32px 0;
+.contact__title {
+  margin: 32px 0;
 }
 
 .contact__links {
-    font-size: var(--font-large);
-    margin: 24px 0;
-    transition: all var(--animation-duration) ease-in;
+  font-size: var(--font-large);
+  margin: 24px 0;
+  transition: all var(--animation-duration) ease-in;
 }
 
-.contact__links i:hover{
-    transform: scale(1.1);
-    color: var(--color-yellow);
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-yellow);
 }
 
 /* Scroll */
 .arrow-up {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    font-size: 50px;
-    color: var(--color-white);
-    background-color: var(--color-pink);
-    border-radius: 50%;
-    /* display: none; 
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+  border-radius: 50%;
+  /* display: none; 
     dispaly 는 없어졌다가 나타나는 것이므로 애니메이션이 안됨 
     대신 투명도를 사용하나 투명도는 클릭이 되므로 클릭을 막는 pointer-events 사용*/
-    opacity: 0;
-    pointer-events: none;
-    transition: all 300ms ease-in;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in;
 }
 
 .arrow-up.visible {
-    /* display: block; */
-    opacity: 1;
-    pointer-events: auto;
-    /* CSS 구글 검색시 예제 mdn pointer-events */
+  /* display: block; */
+  opacity: 1;
+  pointer-events: auto;
+  /* CSS 구글 검색시 예제 mdn pointer-events */
 }
-
 
 /* 반응형 시 적용할 옵션들 */
 /* For blelow 768px screen width */
 @media screen and (max-width: 768px) {
-    .navbar__toggle-btn {
-        display: block;
-        align-items: flex-start;
-    }
+  .navbar__toggle-btn {
+    display: block;
+    align-items: flex-start;
+  }
 
-    #navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .navbar__menu {
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        display: none;
-    }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
 
-    .about__majors {
-        flex-direction: column;
-    }
+  .about__majors {
+    flex-direction: column;
+  }
 
-    .major {
-        margin-bottom: 38px;
-    }
+  .major {
+    margin-bottom: 38px;
+  }
 
-    .skillset {
-        flex-direction: column;
-    }
+  .skillset {
+    flex-direction: column;
+  }
 
-    .project {
-        flex-grow: 1;
-    }
+  .project {
+    flex-grow: 1;
+  }
 
-    .testimonial__avatar {
-        width: 80px;
-        height: 80px;
-    }
+  .testimonial__avatar {
+    width: 80px;
+    height: 80px;
+  }
 }

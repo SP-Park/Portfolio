@@ -26,6 +26,7 @@ navbarMenu.addEventListener('click', (event) => { //클릭 시 이벤트를 받�
     if(link == null) {
         return;
     }
+    navbarMenu.classList.remove('open');
     // console.log(event.target.dataset.link);
 // 받아온 아이디를 이용해 스크롤을 실행 javascript scroll to id 검색
      // 중복 부분 함수화 (scrollIntoView)
@@ -33,6 +34,13 @@ navbarMenu.addEventListener('click', (event) => { //클릭 시 이벤트를 받�
     // scrollTo.scrollIntoView({behavior: 'smooth'});
     scrollIntoView(link);
 });
+
+// 햄버거 클릭 시 메뉴가 보이도록 하는 기능 
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+})
+
 
 // contact me 클릭 시 이동 
 const homeContactBtn = document.querySelector('.home__contact');

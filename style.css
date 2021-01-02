@@ -394,10 +394,10 @@ p {
   top: 0;
   left: 0;
   opacity: 0; /* 투명도 */
-  transition: all var(--animation-duration) ease-in;
   transform: translateY(
     10px
   ); /* hover시 설명이 올라오는 느낌을 주기 위해 조금 아래로 내려놓음 */
+  transition: all var(--animation-duration) ease-in;
 }
 
 /* 프로젝트에 마우스를 올리면 설명이 나타나게 하기 위한 조건 */

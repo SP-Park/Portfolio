@@ -104,7 +104,7 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-grey);
   padding: 8px;
 }
 
@@ -121,6 +121,7 @@ p {
   padding: 8px, 12px;
   margin: 0 4px;
   color: var(--color-white);
+  font-size: 20px;
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
@@ -128,7 +129,7 @@ p {
 
 .navbar__menu__item:hover {
   border-color: var(--color-white);
-  background-color: var(--color-dart-pink);
+  background-color: var(--color-dark-grey);
 }
 
 /* 반응형 메뉴 디자인 */
@@ -143,11 +144,11 @@ p {
 
 /* Home */
 #home {
-  background: url("imgs/homebackground-200515-154505.png") center/cover
+  background: url("imgs/Pil\'s\ Portfolio.png") center/cover
     no-repeat;
   /* center/cover no-repeat 반응형 웹으로 만들기 위한 이미지 옵션 추가 */
   padding: 40px;
-  padding-top: 120px;
+  padding-top: 400px;
   text-align: center;
 }
 
@@ -215,7 +216,7 @@ p {
   /* 1> .major__icon:hover <- 전체가 바뀜 
        2> .major__icon i:hover   <- 아이콘만 바뀜 (바깥 원 테두리는 안바꾸고 마우스가 테두리가 아닌 아이콘에 올라갔을 경우 바뀜
        3> .major__icon:hover i <- 아이콘만 바뀜 (마우스가 바깥 원 테두리에 올라가도 아이콘만 바뀜) */
-  color: var(--color-pink);
+  color: var(--color-orange);
   transform: rotate(-30deg) scale(1.1); /* 마우스를 올릴 경우 아이콘을 왼쪽(-30도)으로 회전 및 크기를 키움 */
 }
 

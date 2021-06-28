@@ -367,14 +367,14 @@ p {
   transform: scale(0.96) translateY(40px);
 }
 
-.project {
+.project  {
   position: relative; /* description 에서 앱솔루트 옵션을 쓰기 위한 기준점 지정 */
   /* 앱솔루트 옵션 사용 시 기준점의 static이 아닌 다른 것을 사용하는 부모 */
   /* 컨텐츠 중간 정렬 */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 300px;
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
